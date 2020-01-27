@@ -1,0 +1,76 @@
+
+En Caso de tener problemas en cuanto a la base de datos en la carpeta db viene toda la estructura de la base de datos
+así como los datos de los usuarios, catalogos de areas,puestos y tipos de reportes.
+
+En caso de tener problemas en cuanto a como es el diagrama de la base de datos esta en la carpeta diagramas del proyecto y esta
+guardado con el nombre de er-helpdesk.png en caso de querer saber como es la secuencia que sigue el proyecto esta guardado el
+diagrama con el nombre de help_desk secuencia.png todos los diagramas vienen con extencion png ya que fueron exportados en caso de
+querer ver los diagramas originales esta guardado el archivo con el nombre de helpdesk.mdj el archivo esta hecho en staruml programa
+de diagramacion de´proyectos en caso de necesitar o querer abrirlo debe tener instalado el programa staruml.
+
+Las plantillas que fueron utilizadas son:
+Gentella Allela Master es una plantilla admin hecha en bootstrap 4 con html5 javascript y jquery
+la plantilla es de licencia libre y puede ser descargada de la página https://github.com/ColorlibHQ/gentella
+La plantilla que se utilizo para la ventana usuario y usuario avanzado  es la plantilla de jober desk master
+la plantilla es de lincencia libre y puede ser descargada de la pagina http://themewagon.com/themes/free-boostrap-html5-job-board-template-jober-desk.
+
+Los plugins que fueron utilizados para la realizacion de el proyecto fueron:
+font-awesome para los iconos de la vista.
+Framework jquery para la realizacion de peticiones al servidor.
+Framework ajax para realizacion de peticiones al servidor.
+Framework bootstrap 4 para la vista de las páginas.
+Appi de ajax y jquery para realizaciion de modales.
+Framework vendor para la vista de las letras.
+Framework JCHECK peticiones del usuario al sevidor.
+todos estos pluggins y frameworks son de licencia libre y son encontrados en las paginas de w3shool.com y bootstrap.com
+
+Los lenguajes que fueron utilizados para la realización del proyecto son:
+PHP 7 nativo sin uso de ningun framework.
+Javascript nativo.
+Jquery.
+AJAX.
+SQL  MYSQL y Maria DB para la base de datos.
+CSS para las hojas de estilos
+Se uso programacion híbrida es decir POO(programación orientada a objetos) y Programacion Estructurada asi comom programacion orientada a  eventos en algunos casos de javascript.
+
+Para la administración de usuarios se utilizo un CRUD (CREATE,READ,UPDATE) es decir crear,editar y leer usuarios,para administracion reportes se utilizo al igual un crud ,para administrar puestos y areas se utilizo al igual un crud.
+
+El proyecto va en la version 5.2 en esta version el usuario administrador puede ver todos los reportes que se han hecho los reportes que tienen solucion temporal los reporters con espera de confirmacion asi como dar soluciones a los reportes dar solucion temporal añadir solucion temporal a otra solucion temporal del mismo reporte, puede añadir eliminar y editar usuarios, puede añadir areas y puestos inexistentes. visualizar las estadísticas es decir puede visualizar en porcentajes cuan eficiente es su trabajo,cuantos usuarios estan activos en el sistema cuantos reportes se han hecho cuantos han sido solucionados cuantos esperan que sea aceptada la solucion, asi como visualizar los datos en su perfil.
+
+Para el usuario con privilegios avanzados la version 5.2 hace acciones que son registrar usuarios eliminar y editar usuario menos la contraseña al igual que en la lista de usuarios solo puede ver nombre nombre de usuario area y puesto puede agregar reportes, ver el status que tiene su reporte es decir si tiene un reporte con una solucion temporal puede ver el seguimiento que se le está dando a el reporte asi como cuando un reporte se ah cerrado puede darle confirmar el usuario si fue atendido puede ver cuantos reportes ah hecho asi como consultar su perfil.
+
+Para el usuario normal solo hace las acciones de agregar reportes, consultar todos los reportes hehos por el usuario dar seguimiento a los reportes con solución  temporal y confirmar cuando el reporte fue solucionado.
+
+Para el avance a la siguiente version el desarrollador quedó en la parte de poder descargar por excel los reportes con filtro al igual que convertir todo a datatable para hacer  copnsulras en tiempo real al iguasl que para versiones posteriores poner lo de notificaciones emergentes en tiempo real con smart.js al igual que poner graficas. 
+
+
+En cuanto a base de datos se utilizó un modelo de base de datos relacional ya que el flujop interino de datos no superarar el big dataque vendrian siendo millones de registros en cuanto consultas por causas de que se alentaran en cuanto a respuesta de servidor interno  no se utilizaron vistas sino se utilizaron las consultas juntop con los inner joins se espera que como vaya evolucionando el sistema se utilien vistas y mejorar el rendimiento con balanceadores tanto de lado de sevidor como del lado de el sevidor asi como una programación mas orientada a eventos y así poder optimizar aún mas la peticion y mandado de informacion.
+
+En cuanto a motivos de seguridad se tiene pensado que para las versiones que salgan despues lleven toda la petición de datos encriptados por protocolo aes-128 caracteres con una llave unica para el desencriptado de lo que esta encriptado.
+
+
+En cuanto a actualizaciones de frameworks no es muy probable que deje de servir bootstrap jquery ni ajax asi como las appis de google que trae el sistema en caso de que deje d eser compatible la version estable de bootstrap sacar los uevos links de la pagina : https://getbootstrap.com/docs/4.3/getting-started/introduction/
+en cuanto a que deje de ser compatible la version de ajax y jquery copiar los links de la siguiente pagina: https://jquery.com/
+Si se desean cambiar los iconos que van alado de los menus checar la pagina https://fontawesome.com/icons y checar los iconos que seran
+
+
+
+En la versión 5.7 que es la version actual que se está manejando se implementó el envío de correos por phpmailer en el que en cada carpeta de tipos de usuario que es administrator,advanceduser,usuario viene una carpeta llamada phpmailer donde vienen 3 archivos llamados exception.php,phpmailer.php y smtp.php esos archivos fueron descargados de el foro de github de PHP Mailer que se encontrará en la página https://github.com/PHPMailer/PHPMailer estos 3 archivos antes mencionados estan en la carpeta src y solo serán descagados esos tres archivos antes mencionados para el buen funcionamiento de el phpmailer los archivos de configuracion para el envio de correos estan en cada carpeta nombrados como action en dado caso de tener problmas con el envío de correos dirigirse a los archivos action.php y reconfigurar los datos de envío en el vienen mandado por metodo post los datos necesarios como son el correo de la persona que se enviara la descripcion del reporte y en dado caso de tener solucion temporal o solucion definitiva la unica forma en la que tuviera algun problema ese archivo sería los protocolos smtp por los que son mandados en este caso está el protocolo esta definido como $mail->host smtp.office365.com en internet vienen los protocolos smtp de cada servidor de correo electronico la segunda cosa por la que pueda fallar sería por estar mal el correo de salida que está especificado bajo el nombre 
+$mail->$Username al igual que en caso de que se cambie la contraseña del correo saliente se encuentra como $mail->Password nota importante el puerto 587 no debe de ser nunca cambi9ado ya que es es el puerto de salida del host ya sea para servidores locales como xampp o servidores fisicos al igual que para webservices.
+El SMTPSecure debe de estar siempre en TLS como metodo de cifrado el correo de salida esta especificado como $mail->setFrom donde espera dos parametros uno el correo delque saldra y el segundo el nombre con el que aparecerá pero el segundo es opcional.
+El correo al que se mandaran el resultado del reporte esta especificado como $mail->addAddress() y dentro tiene una variable que fue mandada por metodo post desde los formularios de resolución de el reporte.
+
+La base de datos actualizada y puesta en marcha desde el dia 27 de marzo en dado caso de que la base de datos colapse o se corrompa se encuentra en la carpeta db de la carpeta ramal del proyecto a la que pueden acceder:
+
+Desde la computadora que fue hecho el proyecto 
+Paso 1: Click en menu.
+Paso 2: Xampp Control Panel 
+Paso 3: Activar el servidor apache y mysql para tener acceso  al servidor local de la máquina.
+Paso 4: Dirigirse al navegador de preferencia y porner en la barra de direcciones y poner localhost/factual/db y aparecerá una pantalla de directorios donde se descargará automaticamente al dar click en el nombre de la base de datos.
+Paso 5: Poner en la barra de direcciones del navegador localhost/phpmyadmin
+Paso 6: Click pestaña SQL y poner primero Create database nombre de base de datos y click en continuar.
+Paso 7: Dirigirse al menú y dar click en Importar seleccionara en la pestaña descargas el archivo que descargo y dara click en aceotar y despues en continuar subira la base de datos sin problemas.
+
+En caso de querer agregar un nuevo usuario super administrador se debe de cambiar en la base de datos el tipo de usuario especificado es decir el campo id_cusuario de labase de datos en la tabla musuario buscando el nombre de el usuario al que se va acambiar y cambiar el campo id_cusuario de 2 a 1.
+
+Se hicieron Usuarios admins 
