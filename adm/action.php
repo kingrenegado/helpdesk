@@ -71,7 +71,7 @@ try {
     $mail->Host       = 'smtp.office365.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
     $mail->Username   = 'sistemas@factualservices.com';                     // SMTP username
-    $mail->Password   = 'Tsun4m10';                               // SMTP password
+    $mail->Password   = 'FS2020fs';                               // SMTP password
     $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
     $mail->Port       = 587;                                    // TCP port to connect to
     $mail->CharSet = 'UTF-8';
